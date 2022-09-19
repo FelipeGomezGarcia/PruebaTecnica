@@ -1,4 +1,4 @@
-<div class="row m-2" *ngIf="pelis!=null;">
+<div class="row m-2" *ngIf="pelis!=null && isLoggedIn">
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="name">
     <div class="input-group-append">
@@ -7,7 +7,7 @@
   </div>
   <div class="col mb-2" *ngFor="let peli of pelis; let i = index">
     <div class="card" style="width: 18rem">
-      <img src={{poster}} class="card-img-top" alt="..." />
+      <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{peli.title}}</h5>
         <button class="btn btn-primary" [routerLink]="['info',peli.id]">See more</button>
@@ -16,5 +16,5 @@
   </div>
 </div>
 <div *ngIf="!isLoggedIn">
-You must be logged to see the characters
+You must be logged to see the movies
 </div>

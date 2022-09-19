@@ -17,7 +17,7 @@ export class PeliculasComponent implements OnInit {
   name = '';
   isLoggedIn = false;
   username?:string;
-  poster:any;
+  poster:any = 'https://image.tmdb.org/t/p/w500';
   constructor(private datosService: PeliculasService,private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(){
@@ -33,6 +33,7 @@ export class PeliculasComponent implements OnInit {
     this.datosService.getAll().subscribe(
       (results:any) => {
         this.pelis = results.results;
+        this.poster += this.pelis.poster_path;
       }
     );
 

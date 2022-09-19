@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeliculasService } from 'src/app/services/peliculas.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
   selector: 'app-detalles-pelis',
@@ -13,11 +14,14 @@ export class DetallesPelisComponent implements OnInit {
   id: any = [];
   poster:any = 'https://api.themoviedb.org/3/movie/';
   mensaje='';
-  constructor(private datosService: PeliculasService, private activeRoute: ActivatedRoute,private router:Router) {
+  isLoggedIn: boolean=false;
+  constructor(private datosService: PeliculasService, private activeRoute: ActivatedRoute,private tokenStorageService: TokenStorageService ) {
     this.id = parseInt(this.activeRoute.snapshot.paramMap.get('id') || '[]');
   }
 
   ngOnInit(): void {
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+
     this.datosService.get(this.id).subscribe(
       results => {
         this.pelicula = results;
