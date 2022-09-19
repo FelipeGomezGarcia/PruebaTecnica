@@ -10,6 +10,8 @@ La App esta desplegada en AWS(Amazon Web Services), concretamente en este [enlac
 
 La app trabaja sobre la api de The Movie Database. Es una api creada por la comunidad sobre las diferentes peliculas y series que existen o han existido.
 
+(https://api.themoviedb.org/3/)
+
 ## Funcionamiento
 
 La app consta de el home, la lista de peliculas, la lista de series y un login. Para poder visualizar cualquier pelicula o serie lo primero que tienes que hacer es hacer login. Una vez logueado prodras acceder a las listas y visualizar la información de cada una de las peliculas o series.
