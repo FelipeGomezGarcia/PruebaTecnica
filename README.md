@@ -2,26 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
-## Development server
+## Deploy 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La App esta desplegada en AWS(Amazon Web Services), concretamente en este [enlace](https://master.d2mpepwejwzgz3.amplifyapp.com/).
 
-## Code scaffolding
+## API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La app trabaja sobre la api de The Movie Database. Es una api creada por la comunidad sobre las diferentes peliculas y series que existen o han existido.
 
-## Build
+## Funcionamiento
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+La app consta de el home, la lista de peliculas, la lista de series y un login. Para poder visualizar cualquier pelicula o serie lo primero que tienes que hacer es hacer login. Una vez logueado prodras acceder a las listas y visualizar la información de cada una de las peliculas o series.
 
-## Running unit tests
+Las listas estan distribuidas en tarjetas con el poster del contenido y del titulo. Para acceder a mas información solo hace falta darle al boton que se encuentra en cada tarjeta donde pone "See more".
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Endpoints
 
-## Running end-to-end tests
+Para el funcionamiento de la app he utilizado los siguientes endpoints, añadiendoles el parametro de la api key proporcionada por la propia pagina de The Movie DB:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- GET /movie/now_playing: para visualizar la lista de peliculas.
+- GET /movie/id: para visualizar la información de una pelicula.
+- GET /tv/on_the_air: para visualizar la lista de series en emisión.
+- GET /tv/id: para visualizar la información de una serie.
+- GET /authentication/token/new: para obtener un token valido.
+- POST /authentication/token/validate_with_login: para validar el login del usuario.
