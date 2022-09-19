@@ -22,8 +22,8 @@ export class PeliculasService {
 
 
   findByName(name:any):Observable<any[]>{
-    var peliculas;
-    var peliculasFiltradas:any = [];
+    let peliculas;
+    let peliculasFiltradas:any = [];
     this.getAll().subscribe(
       (data : any) =>{
         peliculas = data.results;

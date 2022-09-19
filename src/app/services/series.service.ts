@@ -21,8 +21,8 @@ export class SeriesService {
   }
 
   findByName(name:any):Observable<any[]>{
-    var series;
-    var seriesFiltradas:any = [];
+    let series;
+    let seriesFiltradas:any = [];
     this.getAll().subscribe(
       (data : any) =>{
         series = data.results;
