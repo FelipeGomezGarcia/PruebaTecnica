@@ -14,7 +14,10 @@ La app trabaja sobre la api de The Movie Database. Es una api creada por la comu
 
 ## Funcionamiento
 
-La app consta de el home, la lista de peliculas, la lista de series y un login. Para poder visualizar cualquier pelicula o serie lo primero que tienes que hacer es hacer login. Una vez logueado prodras acceder a las listas y visualizar la información de cada una de las peliculas o series.
+La app consta de el home, la lista de peliculas, la lista de series y un login. Para poder visualizar cualquier pelicula o serie lo primero que tienes que hacer es hacer login. Una vez logueado prodras acceder a las listas y visualizar la información de cada una de las peliculas o series. Credenciales:
+
+Username: FelipeGomez
+Password: password
 
 Las listas estan distribuidas en tarjetas con el poster del contenido y del titulo. Para acceder a mas información solo hace falta darle al boton que se encuentra en cada tarjeta donde pone "See more".
 
